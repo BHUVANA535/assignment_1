@@ -1,23 +1,4 @@
-#!/usr/bin/env python3
-"""
-Smart Bin Classifier - Simple & Correct Solution
-=================================================
 
-APPROACH: Since we DON'T have bounding box annotations, we use:
-1. Whole-image multi-label classification (what we CAN do correctly)
-2. EfficientNet backbone with attention
-3. Multi-task heads for count + presence + quantity
-
-This is HONEST about limitations:
-- We can't do true object detection without bbox annotations
-- We use image-level labels (which we HAVE)
-- We focus on what's achievable with our data
-
-Usage:
-  python smart_bin_classifier.py --root "/path/to/dataset" train --epochs 30
-  python smart_bin_classifier.py --root "/path/to/dataset" infer --ckpt model.pt --image_id 00001
-  python smart_bin_classifier.py --root "/path/to/dataset" ui --ckpt model.pt
-"""
 
 from __future__ import annotations
 
